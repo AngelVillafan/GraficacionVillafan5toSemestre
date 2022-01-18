@@ -1,0 +1,95 @@
+﻿<Window x:Class="AbejaLadyBug.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AbejaLadyBug"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+
+        <Polygon Points="0,-10 10,30 20,-10"
+                 Fill="#430000"
+                 Canvas.Top="220"
+                 Canvas.Left="185">
+            <Polygon.RenderTransform>
+                <RotateTransform Angle="320"></RotateTransform>
+            </Polygon.RenderTransform>
+        </Polygon>
+        
+        <Ellipse Width="140"
+                 Height="140"
+                 StrokeThickness="2"
+                 Stroke="#1b1e23"
+                 Canvas.Top="90"
+                 Canvas.Left="76">
+            <Ellipse.Fill>
+                <VisualBrush Stretch="None" 
+                             Viewport="0,0 .25,.25" 
+                             TileMode="FlipXY" >
+                    <VisualBrush.Visual>
+                        <UniformGrid Background="#ffda00" 
+                                     Width="40" 
+                                     Height="40">
+                            <Ellipse Width="25"
+                                     Height="25"
+                                     Fill="#1b1e23"></Ellipse>
+                        </UniformGrid>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Ellipse Width="150"
+                 Height="50"
+                 Stroke="Gray"
+                 StrokeThickness="2"
+                 Canvas.Left="100"
+                 Canvas.Top="85">
+            <Ellipse.RenderTransform>
+                <RotateTransform Angle="0"></RotateTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <SolidColorBrush Color="LightGray"
+                                 Opacity=".75"></SolidColorBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse Width="150"
+                 Height="50"
+                 Stroke="Gray"
+                 StrokeThickness="2"
+                 Canvas.Left="105"
+                 Canvas.Top="80"
+                 RenderTransformOrigin="0,.5">
+            <Ellipse.RenderTransform>
+                <RotateTransform Angle="100"></RotateTransform>
+            </Ellipse.RenderTransform>
+            <Ellipse.Fill>
+                <SolidColorBrush Color="LightGray"
+                                 Opacity=".75"></SolidColorBrush>
+            </Ellipse.Fill>
+        </Ellipse>
+
+        <Ellipse Width="75"
+                 Height="75"
+                 Fill="Black"
+                 Canvas.Top="50"
+                 Canvas.Left="50"></Ellipse>
+        <Polyline StrokeStartLineCap="Round"
+                  StrokeEndLineCap="Round"
+                  StrokeThickness="5"
+                  Stroke="Black"
+                  Points="0,0 0,30 20,30 20,0"
+                  Canvas.Top="40"
+                  Canvas.Left="50"
+                  RenderTransformOrigin=".5,.5">
+            <Polyline.RenderTransform>
+                <RotateTransform Angle="320"></RotateTransform>
+            </Polyline.RenderTransform>
+        </Polyline>
+
+
+
+
+    </Canvas>
+</Window>

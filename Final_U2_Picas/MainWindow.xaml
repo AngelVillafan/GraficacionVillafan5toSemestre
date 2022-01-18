@@ -1,0 +1,75 @@
+﻿<Window x:Class="Final_U2_Picas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Final_U2_Picas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="250">
+    <Canvas>
+
+        <Canvas.Background>
+            <VisualBrush TileMode="FlipXY" Viewport="0,0 .5,.5" Stretch="Fill">
+
+                <VisualBrush.Visual>
+
+                    <Path Stroke="Black"
+                          Fill="Black"
+                          Data="M100,10 
+                          C100,10 100,25 132,50
+                          A25,25 0,1,1 110,99
+                          L125,130 
+                          L75,130
+                          L90,99
+                          A25,25 0,1,1 70,50
+                          C70,50 100,25 100,10" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-45"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+
+                    </Path>
+
+
+                </VisualBrush.Visual>
+            </VisualBrush>
+        </Canvas.Background>
+
+
+
+    </Canvas>
+    <!--<Window.Background>
+        <VisualBrush TileMode="FlipXY" Viewport="0,0 .5,.5" Stretch="Fill">
+
+            <VisualBrush.Visual>
+                
+                    <Path Stroke="Black"
+                          Fill="Black"
+                          Data="M100,10 
+                          C100,10 100,25 132,50
+                          A25,25 0,1,1 110,99
+                          L125,130 
+                          L75,130
+                          L90,99
+                          A25,25 0,1,1 70,50
+                          C70,50 100,25 100,10" RenderTransformOrigin="0.5,0.5">
+                        <Path.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-45"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </Path.RenderTransform>
+
+                    </Path>
+                
+
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Background>-->
+</Window>

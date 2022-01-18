@@ -1,0 +1,111 @@
+﻿<Window x:Class="AnimacionHolaResorte.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimacionHolaResorte"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <!--<Ellipse Height="140"
+                     Width="140">
+                <Ellipse.Fill>
+                    <RadialGradientBrush GradientOrigin=".25,.25" Center=".45,.45">
+                        <GradientStop Color="White" Offset=".1"></GradientStop>
+                        <GradientStop Color="Gray" Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Ellipse.Fill>
+            </Ellipse>-->
+
+            <Rectangle Width="300"
+                       Height="90"
+                       Fill="#c80004"
+                       Canvas.Top="345"></Rectangle>
+            <TextBlock Height="75"
+                       Width="200"
+                       Background="#004999"
+                       Foreground="#ffda00"
+                       FontWeight="Bold"
+                       FontSize="40"
+                       Padding="0,10,0,0"
+                       TextAlignment="Center"
+                       Canvas.Left="50">
+                
+                <TextBlock.RenderTransform>
+                    <TranslateTransform Y="170"
+                                        x:Name="texto"></TranslateTransform>
+                </TextBlock.RenderTransform>
+                
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:05"
+                                                 From="170"
+                                                 To="70"
+                                                 Storyboard.TargetName="texto"
+                                                 Storyboard.TargetProperty="Y"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+                
+                Hola
+            </TextBlock>
+            <Path Stroke="Black"
+                  Fill="#ffda00"
+                  StrokeThickness="2"
+                  RenderTransformOrigin=".5,1"
+                  Canvas.Left="50"
+                  Canvas.Top="145"
+                  Data="M0,0 L200,0
+                  L175,25
+                  L200,50
+                  L175,75
+                  L200,100
+                  L175,125
+                  L200,150
+                  L175,175
+                  L200,200
+                  L0,200
+                  L25,175
+                  L0,150
+                  L25,125
+                  L0,100
+                  L25,75
+                  L0,50
+                  L25,25
+                  L0,0
+                  M25,25 L175,25
+                  M25,75 L175,75
+                  M25,125 L175,125
+                  M25,175 L175,175">
+                <Path.RenderTransform>
+                    <ScaleTransform ScaleY=".50"
+                                    x:Name="resorte"></ScaleTransform>
+                </Path.RenderTransform>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:05"
+                                                 From=".50"
+                                                 To="1"
+                                                 Storyboard.TargetName="resorte"
+                                                 Storyboard.TargetProperty="ScaleY"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+            </Path>
+            
+        </Canvas>
+    </Grid>
+</Window>

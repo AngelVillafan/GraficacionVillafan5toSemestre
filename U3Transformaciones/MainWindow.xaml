@@ -1,0 +1,24 @@
+﻿<Window x:Class="U3Transformaciones.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:U3Transformaciones"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Margin="70">
+        <TextBlock>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="45"></RotateTransform>
+                    <ScaleTransform ScaleX="5" ScaleY="5"></ScaleTransform>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+            Hola
+        </TextBlock>
+        <TextBlock>
+            Mundo
+        </TextBlock>
+
+    </StackPanel>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="FormasGeometricas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FormasGeometricas"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        <Path Fill="Cyan"
+              Stroke="Black">
+            <Path.Data>
+                <GeometryGroup FillRule="EvenOdd">
+                    <EllipseGeometry Center="50,50" RadiusX="50" RadiusY="50"></EllipseGeometry>
+                    <EllipseGeometry Center="50,50" RadiusX="25" RadiusY="25"></EllipseGeometry>
+                    <RectangleGeometry Rect="0,0,50,100"></RectangleGeometry>
+                </GeometryGroup>
+            </Path.Data>
+            
+        </Path>
+        <!--<Path Fill="Cyan"
+              Stroke="Black">
+            <Path.Data>
+                <CombinedGeometry GeometryCombineMode="Exclude">
+                    <CombinedGeometry.Geometry1>
+                        <RectangleGeometry Rect="0,0,50,50"></RectangleGeometry>
+                    </CombinedGeometry.Geometry1>
+                    <CombinedGeometry.Geometry2>
+                        <EllipseGeometry Center="50,25" RadiusX="30" RadiusY="10"></EllipseGeometry>
+                    </CombinedGeometry.Geometry2>
+                </CombinedGeometry>
+            </Path.Data>
+        </Path>-->
+    </Canvas>
+</Window>

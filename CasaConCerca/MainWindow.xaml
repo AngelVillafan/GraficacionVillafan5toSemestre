@@ -1,0 +1,166 @@
+﻿<Window x:Class="CasaConCerca.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CasaConCerca"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas>
+        
+        <Rectangle Width="50"
+                   Height="100"
+                   Fill="IndianRed"
+                   Stroke="Black"
+                   Canvas.Left="200"
+                   Canvas.Top="25"></Rectangle>
+        <Rectangle Width="200"
+                   Height="200"
+                   Fill="Wheat"
+                   Stroke="Black"
+                   Canvas.Left="200"
+                   Canvas.Top="100"></Rectangle>
+        <Polygon Fill="DarkRed"
+            Points="180,110 300,25 420,110"
+                 Stroke="Black"></Polygon>
+        <!-- Ventana IZQUIERDA -->
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="150"
+                   Canvas.Left="250"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="150"
+                   Canvas.Left="230"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="170"
+                   Canvas.Left="250"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="170"
+                   Canvas.Left="230"></Rectangle>
+        <!-- Ventana DERECHA -->
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="150"
+                   Canvas.Left="350"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="150"
+                   Canvas.Left="330"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="170"
+                   Canvas.Left="350"></Rectangle>
+
+        <Rectangle Width="20"
+                   Height="20"
+                   Fill="CornflowerBlue"
+                   Stroke="Black"
+                   Canvas.Top="170"
+                   Canvas.Left="330"></Rectangle>
+        
+        <!--Puerta-->
+        <Rectangle Width="40"
+                   Height="80"
+                   Fill="SaddleBrown"
+                   Canvas.Left="280"
+                   Canvas.Top="220"
+                   Stroke="Black"></Rectangle>
+
+        <Ellipse Width="70"
+                   Height="15"
+                   Fill="DarkRed"
+                   Canvas.Left="190"
+                   Canvas.Top="20"
+                   Stroke="Black"></Ellipse>
+
+       <!--Cercos verticales-->
+        
+        <Rectangle Width="30"
+                   Height="120"
+                   Fill="Black"
+                   Canvas.Top="260"
+                   Canvas.Left="190"></Rectangle>
+        <Rectangle Width="30"
+                   Height="120"
+                   Fill="Black"
+                   Canvas.Top="260"
+                   Canvas.Left="240"></Rectangle>
+        <Rectangle Width="30"
+                   Height="120"
+                   Fill="Black"
+                   Canvas.Top="260"
+                   Canvas.Left="290"></Rectangle>
+        <Rectangle Width="30"
+                   Height="120"
+                   Fill="Black"
+                   Canvas.Top="260"
+                   Canvas.Left="340"></Rectangle>
+        <Rectangle Width="30"
+                   Height="120"
+                   Fill="Black"
+                   Canvas.Top="260"
+                   Canvas.Left="390"></Rectangle>
+        
+        <!--Cercos horizontales-->
+        <Rectangle Width="260"
+                   Height="25"
+                   Fill="Black"
+                   Canvas.Top="345"
+                   Canvas.Left="175"></Rectangle>
+        <Rectangle Width="260"
+                   Height="25"
+                   Fill="Black"
+                   Canvas.Top="270"
+                   Canvas.Left="175"></Rectangle>
+        
+        <!--Puntas de los cercos-->
+        <Polygon Stroke="Black"
+                 Fill="Black"
+                 Points="0,25 15,0 30,25"
+                 Canvas.Top="235"
+                 Canvas.Left="240"></Polygon>
+        <Polygon Stroke="Black"
+                 Fill="Black"
+                 Points="0,25 15,0 30,25"
+                 Canvas.Top="235"
+                 Canvas.Left="190"></Polygon>
+        <Polygon Stroke="Black"
+                 Fill="Black"
+                 Points="0,25 15,0 30,25"
+                 Canvas.Top="235"
+                 Canvas.Left="290"></Polygon>
+        <Polygon Stroke="Black"
+                 Fill="Black"
+                 Points="0,25 15,0 30,25"
+                 Canvas.Top="235"
+                 Canvas.Left="340"></Polygon>
+        <Polygon Stroke="Black"
+                 Fill="Black"
+                 Points="0,25 15,0 30,25"
+                 Canvas.Top="235"
+                 Canvas.Left="390"></Polygon>
+
+    </Canvas>
+</Window>

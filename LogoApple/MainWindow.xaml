@@ -1,0 +1,81 @@
+﻿<Window x:Class="LogoApple.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogoApple"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="580">
+    <Grid>
+        <Canvas>
+            <!--Fill="#61bc44"-->
+        <Path Data="M 270,30 
+              M270,45 Q275,120 190,140
+              M190,140 Q190,60 270,45"
+              
+              Canvas.Left="88"
+              Canvas.Top="35">
+                <Path.Fill>
+                    <RadialGradientBrush Center=".5,.5"
+                                         GradientOrigin="0,1"
+                                         RadiusX="20"
+                                         RadiusY="0.7">
+                        <GradientStop Color="#61bc44"
+                                      Offset=".2">
+                        </GradientStop>
+                        <GradientStop Color="Black"
+                                      Offset="1"></GradientStop>
+                    </RadialGradientBrush>
+                </Path.Fill>
+        </Path>
+        <Path Data="M 428,202 
+              C428,202 383,157 300,198
+              C300,198 283,202 269,196.5
+              C272,198 195,150 143,205
+              C140,205 50,300 174,456
+              C170,454 225,495 264,470
+              C264,470 283,455 315,470
+              C315,470 355,497 398,453
+              C398,453 520,290 428,202">
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="55" 
+                                      Direction="180" 
+                                      ShadowDepth="40"
+                                      Color="LightGray"></DropShadowEffect>
+                </Path.Effect>
+                
+            <Path.Fill>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#61bc44" Offset=".16"></GradientStop>
+                    <GradientStop Color="#fdb922" Offset=".16"></GradientStop>
+                    <GradientStop Color="#fdb922" Offset=".32"></GradientStop>
+                    <GradientStop Color="#f58319" Offset=".32"></GradientStop>
+                    <GradientStop Color="#f58319" Offset=".49"></GradientStop>
+                    <GradientStop Color="#e1373e" Offset=".49"></GradientStop>
+                    <GradientStop Color="#e1373e" Offset=".66"></GradientStop>
+                    <GradientStop Color="#973a98" Offset=".66"></GradientStop>
+                    <GradientStop Color="#973a98" Offset=".85"></GradientStop>
+                    <GradientStop Color="#009edd" Offset=".85"></GradientStop>
+                    <GradientStop Color="#009edd" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Path.Fill>
+        </Path>
+        <Ellipse Fill="White"
+                 Width="165"
+                 Height="170"
+                 Canvas.Top="205"
+                 Canvas.Left="380"></Ellipse>
+        
+    </Canvas>
+        <TextBox HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,50"
+                 FontSize="18"
+                 BorderBrush="Transparent">(1977 - 1998)</TextBox>
+        <TextBox HorizontalAlignment="Center"
+                 VerticalAlignment="Bottom"
+                 Margin="0,0,0,70"
+                 FontSize="40"
+                 BorderBrush="Transparent">Apple Inc. Rainbow Logo</TextBox>
+    </Grid>
+</Window>

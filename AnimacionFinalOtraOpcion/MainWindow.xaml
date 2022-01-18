@@ -1,0 +1,407 @@
+﻿<Window x:Class="AnimacionFinalOtraOpcion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimacionFinalOtraOpcion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="770" Width="1210" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="cielo.jpg"></ImageBrush>
+    </Window.Background>
+
+    <Grid>
+        <Canvas>
+
+            <!--Estrellas-->
+
+            <Path Fill="#feface"
+                  Data="M0,0 C0,0 0,25 20,25
+                      C25,25 0,25 0,50
+                      C0,50 0,25 -20,25
+                      C-25,25 0,25 0,0" 
+                  Canvas.Left="1100" 
+                  Canvas.Top="25" 
+                  Height="80" 
+                  Stretch="Fill"
+                  Width="55"
+                  RenderTransformOrigin=".5,.5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="startilt"
+                                     Angle="0"></RotateTransform>
+                </Path.RenderTransform>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:1"
+                                                 From="60"
+                                                 To="20"
+                                                 Storyboard.TargetName="starglow"
+                                                 Storyboard.TargetProperty="BlurRadius"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="startilt"
+                                                Storyboard.TargetProperty="Angle"
+                                                To="0"
+                                                From="15"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True"
+                                                RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+
+                <Path.Effect>
+                    <DropShadowEffect Color="#fed201" 
+                                      BlurRadius="20" 
+                                      x:Name="starglow" 
+                                      Direction="-20"></DropShadowEffect>
+                </Path.Effect>
+            </Path>
+
+            <Path Fill="#feface"
+                  Data="M0,0 C0,0 0,25 20,25
+                      C25,25 0,25 0,50
+                      C0,50 0,25 -20,25
+                      C-25,25 0,25 0,0" 
+                  Canvas.Left="1070" 
+                  Canvas.Top="90" 
+                  Height="50" 
+                  Stretch="Fill"
+                  Width="30"
+                  RenderTransformOrigin=".5,.5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="startilt2"
+                                     Angle="0"></RotateTransform>
+                </Path.RenderTransform>
+                <Path.Effect>
+                    <DropShadowEffect Color="#fed201" 
+                                      BlurRadius="20" 
+                                      x:Name="starglow2" 
+                                      Direction="-20"></DropShadowEffect>
+                </Path.Effect>
+
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:1"
+                                                 From="20"
+                                                 To="60"
+                                                 Storyboard.TargetName="starglow2"
+                                                 Storyboard.TargetProperty="BlurRadius"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="startilt2"
+                                                Storyboard.TargetProperty="Angle"
+                                                To="0"
+                                                From="15"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True"
+                                                RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+
+            </Path>
+
+            <Path Fill="#feface"
+                  Data="M0,0 C0,0 0,25 20,25
+                      C25,25 0,25 0,50
+                      C0,50 0,25 -20,25
+                      C-25,25 0,25 0,0" 
+                  Canvas.Left="120" 
+                  Canvas.Top="15" 
+                  Height="50" 
+                  Stretch="Fill"
+                  Width="30"
+                  RenderTransformOrigin=".5,.5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="startilt3"
+                                     Angle="0"></RotateTransform>
+                </Path.RenderTransform>
+                <Path.Effect>
+                    <DropShadowEffect Color="#fed201" 
+                                      BlurRadius="25" 
+                                      x:Name="starglow3" 
+                                      Direction="-20"></DropShadowEffect>
+                </Path.Effect>
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:1"
+                                                 From="60"
+                                                 To="25"
+                                                 Storyboard.TargetName="starglow3"
+                                                 Storyboard.TargetProperty="BlurRadius"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="startilt3"
+                                                Storyboard.TargetProperty="Angle"
+                                                To="0"
+                                                From="15"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True"
+                                                RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+                
+            </Path>
+
+            <Path Fill="#feface"
+                  Data="M0,0 C0,0 0,25 20,25
+                      C25,25 0,25 0,50
+                      C0,50 0,25 -20,25
+                      C-25,25 0,25 0,0" 
+                  Canvas.Left="10" 
+                  Canvas.Top="245" 
+                  Height="50" 
+                  Stretch="Fill"
+                  Width="30"
+                  RenderTransformOrigin=".5,.5">
+                <Path.RenderTransform>
+                    <RotateTransform x:Name="startilt4"
+                                     Angle="0"></RotateTransform>
+                </Path.RenderTransform>
+                <Path.Effect>
+                    <DropShadowEffect Color="#fed201" 
+                                      BlurRadius="20" 
+                                      x:Name="starglow4" 
+                                      Direction="-20"></DropShadowEffect>
+                </Path.Effect>
+
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:1"
+                                                 From="50"
+                                                 To="20"
+                                                 Storyboard.TargetName="starglow4"
+                                                 Storyboard.TargetProperty="BlurRadius"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="startilt4"
+                                                Storyboard.TargetProperty="Angle"
+                                                To="0"
+                                                From="15"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True"
+                                                RepeatBehavior="Forever">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+
+            </Path>
+
+            <!--Luna-->
+
+            <Path Fill="#dfd0b7"
+                  RenderTransformOrigin=".5,.5"
+                  Data="M0,0 A10,10 0,0,1 150,0 A10,5 0,0,0 0,0">
+
+                <Path.Triggers>
+                    <EventTrigger RoutedEvent="Path.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <DoubleAnimation Storyboard.TargetName="moonglow"
+                                                Storyboard.TargetProperty="BlurRadius"
+                                                To="60"
+                                                From="40"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True">
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="moontilt"
+                                                Storyboard.TargetProperty="Angle"
+                                                To="-120"
+                                                From="-140"
+                                                Duration="0:0:1"
+                                                BeginTime="0:0:0"
+                                                AutoReverse="True">
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Path.Triggers>
+
+                <Path.Effect>
+                    <DropShadowEffect Color="#f0e8d3" 
+                                      BlurRadius="40" 
+                                      x:Name="moonglow" 
+                                      Direction="-20"></DropShadowEffect>
+                </Path.Effect>
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-120"
+                                         x:Name="moontilt"></RotateTransform>
+                        <TranslateTransform X="35" 
+                                            Y="80"></TranslateTransform>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+
+            <!--Nave espacial y perrito-->
+
+            <Canvas Canvas.Top="500"
+                    Canvas.Left="100"
+                    RenderTransformOrigin=".5,0"
+                    Width="250"
+                    Height="50"
+                    Name="nave">
+
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:2"
+                                                 From="-15"
+                                                 To="15"
+                                                 Storyboard.TargetName="naveangle"
+                                                 Storyboard.TargetProperty="Angle"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:2.5"
+                                                 From="-15"
+                                                 To="600"
+                                                 Storyboard.TargetName="naveX"
+                                                 Storyboard.TargetProperty="X"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:2.5"
+                                                 From="0"
+                                                 To="-250"
+                                                 Storyboard.TargetName="naveX"
+                                                 Storyboard.TargetProperty="Y"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform Angle="-15"
+                                         x:Name="naveangle"></RotateTransform>
+                        <TranslateTransform X="0"
+                                            Y="0"
+                                            x:Name="naveX"></TranslateTransform>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+
+                <Image Source="perrito.png"
+                       Width="160"
+                       Canvas.Top="-115"
+                       Canvas.Left="40"></Image>
+
+                <Path Stroke="White"
+                      StrokeThickness="2"
+                      Data="M0,0 A10,10 0 0 1 250,0 A10,2 0 0 1 0,0">
+                    <Path.Fill>
+                        <SolidColorBrush Color="White"
+                                         Opacity=".4"></SolidColorBrush>
+                    </Path.Fill>
+
+                </Path>
+
+                <Path Stroke="White"
+                      StrokeThickness="2"
+                      Data="M0,0 A10,2 0 0 0 250,0 L300,25 A10,3 0 0 1 -50,25 L0,0">
+                    <Path.Fill>
+                        <SolidColorBrush Color="#fbccd1"></SolidColorBrush>
+                    </Path.Fill>
+                </Path>
+
+                <Path Stroke="White"
+                      StrokeThickness="10"
+                      Data="M0,0 C0,0 50,-30 100,0" 
+                      Canvas.Left="160" 
+                      Canvas.Top="-100"
+                      StrokeEndLineCap="Round"
+                      StrokeStartLineCap="Round">
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="50"></RotateTransform>
+                    </Path.RenderTransform>
+                </Path>
+
+                <Canvas.Effect>
+                    <DropShadowEffect BlurRadius="130"
+                                      Color="Pink"
+                                      x:Name="naveshadow"></DropShadowEffect>
+                </Canvas.Effect>
+
+
+            </Canvas>
+
+            <Path Fill="#6b5b4f"
+                  Opacity=".7"
+                  StrokeThickness="4"
+                  Data="M-2,710 C-2,710 900,500 1212,620 V772 H-2 z"></Path>
+
+            <Image Source="mami.png"
+                   Height="260" 
+                   Canvas.Left="1070" 
+                   Canvas.Top="385"></Image>
+            
+            <Image Source="mamimanita.png"
+                   Height="80" 
+                   Canvas.Left="1018" 
+                   Canvas.Top="439"
+                   RenderTransformOrigin="1,1">
+
+                <Image.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:1"
+                                                 From="0"
+                                                 To="-20"
+                                                 Storyboard.TargetName="manita"
+                                                 Storyboard.TargetProperty="Angle"
+                                                 RepeatBehavior="Forever"
+                                                 AutoReverse="True"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Image.Triggers>
+
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0"
+                                     x:Name="manita"></RotateTransform>
+                </Image.RenderTransform>
+            </Image>
+            <!-- de 0 a -20 -->
+
+        </Canvas>
+        <TextBlock HorizontalAlignment="Center"
+                   FontSize="38"
+                   Foreground="White"
+                   FontFamily="verdana"
+                   Opacity=".6"
+                   Margin="0,5">En memoria de Blue (2019 - 2021)</TextBlock>
+    </Grid>
+</Window>

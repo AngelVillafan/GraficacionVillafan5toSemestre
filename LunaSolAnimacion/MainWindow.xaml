@@ -1,0 +1,71 @@
+﻿<Window x:Class="LunaSolAnimacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LunaSolAnimacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas>
+            <Ellipse Stroke="#ff7400"
+                     StrokeThickness="60"
+                     Width="260"
+                     Height="260"/>
+            <Canvas Height="200"
+                    Width="200"
+                    RenderTransformOrigin=".5,.5"
+                    Canvas.Top="30"
+                    Canvas.Left="30">
+                <Canvas.RenderTransform>
+                    <RotateTransform Angle="0"
+                                     x:Name="dianoche"></RotateTransform>
+                </Canvas.RenderTransform>
+                <Canvas.Triggers>
+                    <EventTrigger RoutedEvent="Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation BeginTime="0:0:0"
+                                                 Duration="0:0:10"
+                                                 From="0"
+                                                 To="360"
+                                                 Storyboard.TargetName="dianoche"
+                                                 Storyboard.TargetProperty="Angle"
+                                                 RepeatBehavior="Forever"></DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </Canvas.Triggers>
+                <Ellipse Height="200"
+                         Width="200">
+                    <Ellipse.Fill>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Black" Offset=".28"></GradientStop>
+                            <GradientStop Color="DarkBlue" Offset=".49"></GradientStop>
+                            <GradientStop Color="LightBlue" Offset=".8"></GradientStop>
+                        </LinearGradientBrush>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse Width="44"
+                         Height="44"
+                         Fill="#fdce2a"
+                         Canvas.Top="133"
+                         Canvas.Left="133"></Ellipse>
+                <Ellipse Fill="#e3dac9"
+                         Width="44"
+                         Height="44" Canvas.Left="23" Canvas.Top="23"></Ellipse>
+                <Ellipse Fill="Black"
+                         Width="44"
+                         Height="44" Canvas.Left="40" Canvas.Top="10"></Ellipse>
+            </Canvas>
+            <Path Fill="#ff7400"
+                  Data="M0,0 A10,10 0 0 0 260,0" Canvas.Top="130"></Path>
+            <Ellipse Fill="#ff7400"
+                         Width="44"
+                         Height="44" Canvas.Left="186" Canvas.Top="108"></Ellipse>
+            <Ellipse Fill="#ff7400"
+                         Width="44"
+                         Height="44" Canvas.Left="30" Canvas.Top="108"></Ellipse>
+        </Canvas>
+    </Grid>
+</Window>
